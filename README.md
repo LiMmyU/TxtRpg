@@ -1,29 +1,57 @@
-# TxtRpg
-TextBasedRPG juhuu
-
+# Dokumentation TxtRpg
 
 ## Epics
 
-1. Ui Erstellen und designen 
-2. Spielmechaniken Implementieren 
-3. Zufallsgenerator
+- UI Erstellen & designen
+- Spielmechaniken
+- Zufallsprinzipien (Trefferchance, Schadensbereicht)
 
-## Epic 1 Beschreibung
+## Epic 1: UI
 
-Zum UI gehören die verschiedenen Controls und Das Layout des Spiels. Es Soll einfache Animationen und Grafiken beinhalten. Das UI soll mit einem einfachen Mockup geplant und auch nach diesem umgesetzt werden.
+Das UI soll simpel gestaltet werden und die Interaktion mit dem Spiel wird hauptsächlich via Buttons und TextAreas erfolgen.
+Sprich: Logs und Button um Aktionen wie "Angriff" oder "Statuserhöhungen" zu erhalten.
+Animationen werden simpel gehalten.
 
-## Epic 2 Beschreibung 
+## Epic 2: Spielmechaniken
 
-Das spiel wird mehrere mechaniken bieten. Es soll Charakterwachstum implementiert werden indem man seinen Charakter leveln kann um mehr Leben und Schaden zu erhalten. 
+### Charakterwachstum
 
-Es soll eine Währung im Spiel geben mit der man sich diverse Waffen und Rüstungen kaufen kann.
 
-Ein einfaches Inventar und ausrüstungssystem soll im Spiel implementiert werden.
+Der Charakter sammelt während des Kampfes Erfahrungspunkte welche bei Erreichen eines höheren Levels in Skillpunkte umgewandelt werden.
 
-## Epic 3 Beschreibung 
+Die Menge an Skillpunkten die erhalten werden, wird anhand eines Würfelsystems entschieden.
 
-Die Chance den Gegner zu treffen soll per Zufalls generator und einer %-Chance erfolgen. die wie beim Epic 1 beschrieben implementiert werden soll.
+z.B: 5 5 2 2 2 = Full House (120 Skillpunkte)
 
-Bei einem lvl up wird à la Poker mit 5 Würfel gewürfelt und es gibt dementsprechend Skillpunkte für den Charakter.
+Es gibt folgende Charakterstatistiken welche via Skillpunkte erhöht werden könen:
 
-Geld und Erfahrung die ein Gegener gibt sollen in einem gewissen Bereich zufällig generiert werden.
+- Leben
+- Schaden
+- Trefferchance
+- Kritische-Trefferchance
+- Kritischer-Schaden
+
+### Währungen
+
+Einige Währungen werden im Spiel implementiert:
+
+- Gold
+- Skillpunkte
+
+Gold wird in einem Shop ausgegeben um Ausrüstung zu kaufen.
+Die Ausrüstung bringt diverse Statistik-Erhöhungen vom Spielcharakter.
+
+Die Skillpunkte können direkt in Charakter-Statistiken investiert werden.
+
+## Epic 3: Zufallsmechaniken
+
+Zufallsmechaniken sind im gesamten Spiel präsent.
+Trefferchancen werden per "Trefferchance" Statistik berechnet.
+Das beinhaltet kritische treffer und Schaden.
+
+Schaden wird in einem Bereich berechnet. z.B Der Charakter hat einen Schadensbereich von 5-13 und der Schaden wird
+anhand dieses Bereichs berechnet.
+
+Geld und Erfahrung werden anhand der Gegnerstärke berechnet und dem Spieler gutgeschrieben.
+
+Skillpunkte werden anhand eines "Würfel-Casinos" vergeben.
