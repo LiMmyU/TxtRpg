@@ -5,5 +5,4 @@ public class Main {
         MainView view = new MainView();
     }
 
-
 }

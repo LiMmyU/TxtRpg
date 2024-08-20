@@ -23,4 +23,5 @@ public class PlayerModel {
     public int get_baseMaxDamage(){
         return _baseMaxDamage;
     }
+
 }
