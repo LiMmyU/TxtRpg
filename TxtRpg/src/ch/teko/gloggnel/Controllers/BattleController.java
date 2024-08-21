@@ -1,5 +1,6 @@
 package ch.teko.gloggnel.Controllers;
 
+import ch.teko.gloggnel.Models.EnemyModel;
 import ch.teko.gloggnel.Models.PlayerModel;
 
 import java.util.Random;
@@ -7,6 +8,7 @@ import java.util.Random;
 public class BattleController {
 
     PlayerModel _player = new PlayerModel();
+    EnemyModel _enemy = new EnemyModel();
 
     public BattleController(){
 
